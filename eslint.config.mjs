@@ -17,22 +17,22 @@ export default withNuxt(
     ignores: [".pnpm-store/**", "**/migrations/*"],
   }, {
     rules: {
+      "ts/no-redeclare": "off",
       "ts/consistent-type-definitions": ["error", "type"],
       "no-console": ["warn"],
       "antfu/no-top-level-await": ["off"],
       "node/prefer-global/process": ["off"],
       "node/no-process-env": ["error"],
-      "vue/max-attributes-per-line": ["error", {
-        singleline: { max: 2 },
-        multiline: { max: 1 },
-      }],
-      "ts/no-redeclare": "off",
       "perfectionist/sort-imports": ["error", {
         tsconfig: { rootDir: "." },
       }],
       "unicorn/filename-case": ["error", {
         case: "kebabCase",
         ignore: ["README.md"],
+      }],
+      "vue/max-attributes-per-line": ["error", {
+        singleline: { max: 2 },
+        multiline: { max: 1 },
       }],
     },
   }),
