@@ -1,0 +1,6 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+overrides:
+  esbuild@<=0.24.2: ">=0.25.0"
