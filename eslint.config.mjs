@@ -17,6 +17,7 @@ export default withNuxt(
     ignores: [".pnpm-store/**", "**/migrations/*"],
   }, {
     rules: {
+      "pnpm/yaml-enforce-settings": "off",
       "ts/no-redeclare": "off",
       "ts/consistent-type-definitions": ["error", "type"],
       "no-console": ["warn"],

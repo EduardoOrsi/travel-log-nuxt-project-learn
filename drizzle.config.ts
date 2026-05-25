@@ -6,9 +6,9 @@ import env from "./lib/env";
 export default defineConfig({
   out: "./lib/db/migrations",
   schema: "./lib/db/schema/index.ts",
-  cassing: "snake_case",
+  casing: "snake_case",
   dialect: "sqlite",
   dbCredentials: {
-    url: env.DB_FILE_NAME!,
+    url: env.DB_FILE_NAME,
   },
 });
