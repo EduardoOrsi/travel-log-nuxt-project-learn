@@ -5,7 +5,6 @@ export const location = sqliteTable("location", {
   name: text().notNull(),
   slug: text().notNull().unique(),
   description: text(),
-  image_url: text(),
   lat: real().notNull(),
   long: real().notNull(),
   createdAt: int({ mode: "timestamp" }).notNull().$default(() => Date.now()),

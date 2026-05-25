@@ -3,7 +3,6 @@ CREATE TABLE `location` (
 	`name` text NOT NULL,
 	`slug` text NOT NULL,
 	`description` text,
-	`image_url` text,
 	`lat` real NOT NULL,
 	`long` real NOT NULL,
 	`createdAt` integer NOT NULL,
