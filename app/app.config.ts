@@ -26,6 +26,7 @@ export default defineAppConfig({
       file: "i-tabler-file",
       folder: "i-tabler-folder",
       folderOpen: "i-tabler-folder-open",
+      github: "i-simple-icons-github",
       hash: "i-tabler-hash",
       info: "i-tabler-info-circle",
       light: "i-tabler-sun",

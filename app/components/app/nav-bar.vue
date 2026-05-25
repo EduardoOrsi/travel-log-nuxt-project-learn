@@ -28,9 +28,7 @@ const items = computed<NavigationMenuItem[]>(() => [
           Register
         </UButton>
       </NuxtLink>
-      <NuxtLink to="/signin">
-        <UButton>Sign In</UButton>
-      </NuxtLink>
+      <AuthButton />
     </template>
   </UHeader>
 </template>
