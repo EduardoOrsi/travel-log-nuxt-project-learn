@@ -23,11 +23,6 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     <template #right>
       <UColorModeButton />
-      <NuxtLink to="/register">
-        <UButton variant="link" color="neutral">
-          Register
-        </UButton>
-      </NuxtLink>
       <AuthButton />
     </template>
   </UHeader>
