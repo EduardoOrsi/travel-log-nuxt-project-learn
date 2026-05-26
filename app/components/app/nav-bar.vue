@@ -6,12 +6,12 @@ const route = useRoute();
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "About",
-    to: "/about",
+    to: "/",
     active: route.path.startsWith("/docs/getting-started"),
   },
   {
     label: "Travels",
-    to: "/travels",
+    to: "/",
     active: route.path.startsWith("/docs/components"),
   },
 ]);

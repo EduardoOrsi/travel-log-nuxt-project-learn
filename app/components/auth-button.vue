@@ -5,6 +5,14 @@ import appConfig from "~/app.config";
 
 const authStore = useAuthStore();
 
+const signingIn = ref(false);
+
+async function handleSignIn() {
+  signingIn.value = true;
+  await authStore.signIn();
+  signingIn.value = false;
+}
+
 const items = ref<DropdownMenuItem[][]>([
   [{
     label: "Logout",
@@ -16,7 +24,7 @@ const items = ref<DropdownMenuItem[][]>([
 </script>
 
 <template>
-  <UDropdownMenu v-if="!authStore.loading && authStore.user" :items="items">
+  <UDropdownMenu v-if="authStore.user" :items="items">
     <UUser
       target="_blank"
       :name="authStore.user.name"
@@ -27,11 +35,11 @@ const items = ref<DropdownMenuItem[][]>([
   </UDropdownMenu>
   <UButton
     v-else
-    :trailing-icon="authStore.loading ? undefined : appConfig.ui.icons.github"
-    :loading="authStore.loading"
+    :loading="signingIn"
     :loading-icon="appConfig.ui.icons.loading"
-    :disabled="authStore.loading"
-    @click="authStore.signIn"
+    :disabled="signingIn"
+    :trailing-icon="signingIn ? undefined : appConfig.ui.icons.github"
+    @click="handleSignIn"
   >
     Sign In
   </UButton>
